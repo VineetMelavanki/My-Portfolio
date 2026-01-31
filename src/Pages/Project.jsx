@@ -8,8 +8,6 @@ export default function Projects(){
             alignItems:"flex-start",
             justifyContent:"flex-start",
             gap:3,
-            width:{xs:"100%", sm:"80%",md:"60%"},
-            p:{sm:2,md:5}
             }}>
          <Paper sx={{
             width:400,
