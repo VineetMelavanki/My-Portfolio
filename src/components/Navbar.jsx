@@ -12,7 +12,7 @@ export default function Navbar({children}){
                 <Button variant="outlined" onClick={()=>navigate("/")}>
                     Home
                 </Button>
-               <Button variant="outlined">
+               <Button variant="outlined" onClick={()=>navigate("/About")}>
                 About Me
                </Button>
                <Button variant="outlined" onClick={()=>navigate("/My-Projects")}>
