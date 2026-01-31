@@ -2,7 +2,7 @@ import {Typography,Box,Button,Paper} from "@mui/material"
 import IMAGE from "../assets/myimage.png"
 export default function Home(){
     return(
-        <Box sx={{display:"flex",gap:4, justifyContent:"center",alignItems:"flex-start"}}>
+        <Box  sx={{display:"flex",gap:4, justifyContent:"center",alignItems:"flex-start",p:{sm:2,md:5},width:{xs:"100%",sm:"80%",md:"60%"}}}>
         <Box sx={{display:"flex",flexDirection:"column",gap:3}}>
          <Paper sx={{
             width:1000,
