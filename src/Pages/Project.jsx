@@ -62,6 +62,26 @@ export default function Projects(){
         target="_blank">Github Link</Button>
          </Box>
          </Paper>
+         <Paper sx={{
+          gap:2,
+          p:"1rem 1rem",
+          width:400,
+          alignItems:"flex-start"
+         }}>
+          <Typography variant="h6" fontSize={20} sx={{fontWeight:"bold",mb:2,color:"darkslateblue"}}>
+            Project 3 : Weather App
+          </Typography>
+          <Typography variant="body" fontSize={20}>
+            Description : 
+          </Typography>
+          <Typography variant="body1" mb={2} fontSize={17} mt={2} sx={{lineHeight:1.8}}>
+            Weatherapp is a simple web app that lets you check the current weather for any city. Just type in a location, and it shows you real-time temperature, humidity, and weather conditions—all with a clean, modern interface. Built with a Node.js backend and a responsive frontend, it’s a handy tool whether you’re planning your day or just curious about the weather. ☀️🌧️
+          </Typography>
+          <Box sx={{display:"flex",gap:2,mb:2}}>
+           <img src={image} alt="logo" width={50} height={50}></img>
+           <Button variant="outlined" href="https://github.com/VineetMelavanki/Weatherapp" target="_blank">Github Link</Button>
+          </Box>
+         </Paper>
         </Box>
     )
 }
