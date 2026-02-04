@@ -1,4 +1,5 @@
 import {Typography,Box,Button,Paper} from "@mui/material"
+import {Link} from "@mui/material"
 import IMAGE from "../assets/myimage.png"
 export default function Home(){
     return(
@@ -43,7 +44,7 @@ export default function Home(){
       >
         <Typography
           variant="h5"
-          sx={{ fontWeight: "bold", mb: 2, color: "darkslateblue" }}
+          sx={{ fontWeight: "bold", mb: 2, color: "blueviolet" }}
         >
           Education
         </Typography>
@@ -58,6 +59,35 @@ export default function Home(){
           🎓 Secondary School — Blossom Public School
         </Typography>
        
+      </Paper>
+      <Paper sx={{
+        mt:2,
+        width:1000,
+        p:"2rem 3rem",
+        flexDirection:"column",
+        alignItems:"flex-start",
+        justifyContent:"flex-start",
+      }}>
+      <Typography variant="h5" sx={{fontWeight:"bold",mb:2,color:"blueviolet"}}>
+        Contact Info
+      </Typography>
+      <Typography variant="body1" sx={{mb:1}}>
+        Contact Number : +91 7820905944
+        </Typography>
+        <Box sx={{display:"flex",gap:2}}>
+          <Typography variant="body1">
+            For Enquiry :
+          </Typography>
+           <Link
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=vineetmelavanki06@gmail.com"
+      target="_blank"
+      underline="hover"
+    >
+      Email Me
+    </Link>
+        </Box>
+      
+      
       </Paper>
         </Box>
        <Box >
