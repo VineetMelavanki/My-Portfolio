@@ -1,5 +1,5 @@
 import React from "react";
-import {Box,Paper,Typography,Button} from "@mui/material"
+import {Box,Paper,Typography,Button,Grid} from "@mui/material"
 import image from "../assets/github.png";
 export default function Projects(){
     return(
@@ -7,15 +7,18 @@ export default function Projects(){
             display:"flex",
             alignItems:"flex-start",
             justifyContent:"flex-start",
-            gap:3,
+            gap:4,
             }}>
-         <Paper sx={{
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper sx={{
             width:400,
             p:"1rem 1rem",
             justifyContent:"flex-start",
             alignItems:"flex-start",
             flexDirection:"column"
          }}>
+          
          <Typography variant="h6"
          fontSize={20}
          sx={{fontWeight:"bold",mb:2, color:"darkslateblue"}}>
@@ -36,10 +39,10 @@ export default function Projects(){
           Github Link
          </Button>
          </Box>
-        
-            
          </Paper>
-         <Paper sx={{
+          </Grid>
+          <Grid item xs={12} sm={6} md={12}>
+              <Paper sx={{
             gap:2,
             p:"1rem 1rem",
             width:400,
@@ -62,7 +65,9 @@ export default function Projects(){
         target="_blank">Github Link</Button>
          </Box>
          </Paper>
-         <Paper sx={{
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} >
+            <Paper sx={{
           gap:2,
           p:"1rem 1rem",
           width:400,
@@ -82,6 +87,8 @@ export default function Projects(){
            <Button variant="outlined" href="https://github.com/VineetMelavanki/Weatherapp" target="_blank">Github Link</Button>
           </Box>
          </Paper>
+          </Grid>
+        </Grid>
         </Box>
     )
 }

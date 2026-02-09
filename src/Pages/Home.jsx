@@ -1,102 +1,99 @@
-import {Typography,Box,Button,Paper} from "@mui/material"
-import {Link} from "@mui/material"
-import IMAGE from "../assets/myimage.png"
-export default function Home(){
-    return(
-        <Box  sx={{display:"flex",gap:4, justifyContent:"center",alignItems:"flex-start"}}>
-        <Box sx={{display:"flex",flexDirection:"column",gap:3}}>
-         <Paper sx={{
-            width:1000,
-            p:"2rem 3rem",
-            display:"flex",
-            alignItems:"flex-start",
-            justifyContent:"flex-start",
-            flexDirection:"column",
-        }}>
-         <Typography variant="h4" sx={{fontSize:"45", color:"blueviolet"}}>
-           Trust me, I’m a software engineer in the making.
-         </Typography>
-         <Typography variant="h4" fontSize={20} sx={{mt:2}}>
-            Meet Vineet Melavanki, a B.Tech Computer Science student, full-stack web developer, and lifelong 
-         </Typography>
-         <Typography variant="h4" fontSize={20} sx={{mt : 1}}>
-            learner. I specialize in the MERN stack, focusing on building clean, scalable applications. I 
-         </Typography>
-         <Typography  variant="h4" fontSize={20} sx={{mt : 1}}>
-              continuously sharpen my problem-solving skills through DSA, explore emerging technologies, and 
-         </Typography>
-         <Typography variant="h4" fontSize={20} sx={{mt : 1}}>
-            turn ideas into real-world projects that add value.
-         </Typography>
-        </Paper>
-        <Paper
-        elevation={2}
-        sx={{
-            mt:2,
-          
-          width: 1000,
-          p: "2rem 3rem",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-          justifyContent: "flex-start",
-        }}
-      >
-        <Typography
-          variant="h5"
-          sx={{ fontWeight: "bold", mb: 2, color: "blueviolet" }}
-        >
-          Education
-        </Typography>
+import { Typography, Box, Paper, Link } from "@mui/material";
+import IMAGE from "../assets/myimage.png";
 
-        <Typography variant="body1" sx={{ mb: 1 }}>
-          🎓 B.Tech in Computer Science Engineering — Pimpri Chinchwad University (2024 - 2028)
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 1 }}>
-          🎓 High School — Novel Jr. College  (2022 - 2024)
-        </Typography>
-        <Typography variant="body1">
-          🎓 Secondary School — Blossom Public School
-        </Typography>
-       
-      </Paper>
-      <Paper sx={{
-        mt:2,
-        width:1000,
-        p:"2rem 3rem",
-        flexDirection:"column",
-        alignItems:"flex-start",
-        justifyContent:"flex-start",
-      }}>
-      <Typography variant="h5" sx={{fontWeight:"bold",mb:2,color:"blueviolet"}}>
-        Contact Info
-      </Typography>
-      <Typography variant="body1" sx={{mb:1}}>
-        Contact Number : +91 7820905944
-        </Typography>
-        <Box sx={{display:"flex",gap:2}}>
-          <Typography variant="body1">
-            For Enquiry :
-          </Typography>
-           <Link
-      href="https://mail.google.com/mail/?view=cm&fs=1&to=vineetmelavanki06@gmail.com"
-      target="_blank"
-      underline="hover"
+export default function Home() {
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        gap: { xs: 2, md: 4 },
+        justifyContent: "center",
+        alignItems: "flex-start",
+        width: "100%",
+        px: { xs: 1, md: 4 },
+      }}
     >
-      Email Me
-    </Link>
-        </Box>
-      
-      
-      </Paper>
-        </Box>
-       <Box >
-       <Box
-       component="img"
-       src={IMAGE}
-       alt="Profile-Image"
-       sx={{width:{xs:200,md:300},height:"auto"}}></Box>
-       </Box>
-        </Box>
-    )
+      {/* CONTENT */}
+      <Box sx={{ display: "flex", flexDirection: "column", gap: 2, flex: 1 }}>
+        <Paper
+          sx={{
+            width: "100%",
+            maxWidth: 1000,
+            minWidth: 0,
+            p: { xs: 1.5, md: 4 },
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: { xs: 16, sm: 22, md: 45 },
+              color: "blueviolet",
+              fontWeight: "bold",
+            }}
+          >
+            Trust me, I’m a software engineer in the making.
+          </Typography>
+
+          <Typography sx={{ fontSize: { xs: 12, md: 18 }, mt: 1 }}>
+            Meet Vineet Melavanki, a B.Tech Computer Science student and MERN
+            stack developer focused on scalable applications.
+          </Typography>
+        </Paper>
+
+        <Paper
+          sx={{
+            width: "100%",
+            maxWidth: 1000,
+            minWidth: 0,
+            p: { xs: 1.5, md: 4 },
+          }}
+        >
+          <Typography sx={{ fontSize: { xs: 14, md: 20 }, fontWeight: "bold", color: "blueviolet" }}>
+            Education
+          </Typography>
+
+          <Typography sx={{ fontSize: { xs: 12, md: 16 } }}>
+            🎓 B.Tech CSE — Pimpri Chinchwad University
+          </Typography>
+        </Paper>
+
+        <Paper
+          sx={{
+            width: "100%",
+            maxWidth: 1000,
+            minWidth: 0,
+            p: { xs: 1.5, md: 4 },
+          }}
+        >
+          <Typography sx={{ fontSize: { xs: 14, md: 20 }, fontWeight: "bold", color: "blueviolet" }}>
+            Contact
+          </Typography>
+
+          <Typography sx={{ fontSize: { xs: 12, md: 16 } }}>
+            📞 +91 7820905944
+          </Typography>
+
+          <Link
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=vineetmelavanki06@gmail.com"
+            target="_blank"
+            sx={{ fontSize: { xs: 12, md: 16 } }}
+          >
+            📧 Email Me
+          </Link>
+        </Paper>
+      </Box>
+
+      {/* IMAGE */}
+      <Box
+        component="img"
+        src={IMAGE}
+        alt="Profile"
+        sx={{
+          width: { xs: 90, sm: 140, md: 300 },
+          height: "auto",
+          flexShrink: 0,
+        }}
+      />
+    </Box>
+  );
 }
